@@ -5,41 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRUD TASK APP</title>
   </head>
-  <body>
+  <body class="m-0 flex flex-col items-center justify-start min-h-screen text-white">
 
-    <!-- <form id="create-task-form" class="flex flex-col gap-2 mb-5 w-72 justify-center" >
-      <h2 class="text-xl">Create task</h2>
+    <h1 class="text-3xl my-8">CRUD TASK</h1>
 
-      <div class="form-control flex flex-col gap-1 text-black" >
-        <label for="input-title" class="select-none">Enter title</label>
-        <input
-          type="text"
-          name="title"
-          id="input-title"
-          placeholder="Study JavaScript"
-          required
-        />
+    <!-- Contenedor que agrupa el formulario y la lista de tareas -->
+    <div class="flex flex-row gap-24">
+      <!-- Formulario -->
+      <form id="create-task-form" class="flex flex-col gap-4 w-80 h-96 min-w-96 justify-center border border-white rounded-md p-8">
+        <h2 class="text-xl">Create task</h2>
+
+        <div class="form-control flex flex-col gap-1">
+          <label for="input-title" class="select-none text-white">Enter title</label>
+          <input
+            type="text"
+            name="title"
+            id="input-title"
+            placeholder="Study JavaScript"
+            required
+            class="p-2 rounded text-black"
+          />
+        </div>
+
+        <div class="form-control flex flex-col gap-1">
+          <label for="input-description" class="select-none text-white">Description</label>
+          <textarea
+            class="min-h-24 resize-none p-2 rounded text-black"
+            name="description"
+            id="input-description"
+            placeholder="Study JavaScript basics"
+            required
+          ></textarea>
+        </div>
+
+        <div>
+          <input type="checkbox" name="isComplete" id="input-is-complete" />
+          <label for="input-is-complete" class="select-none">Is complete?</label>
+        </div>
+        <button type="submit" class="border border-white p-2 rounded bg-blue-900 hover:bg-blue-950">Create</button>
+      </form>
+
+      <!-- Lista de tareas -->
+      <div id="app" class="task-list flex flex-col gap-4 w-80 min-h-fit min-w-96 border border-white items-center p-4 rounded-md">
+        <h2 class="text-xl">Tasks</h2>
       </div>
-
-      <div class="form-control flex flex-col gap-1 text-black">
-        <label for="input-description" class="select-none">Description</label>
-        <textarea
-          class="min-h-24 resize-none"
-          name="description"
-          id="input-description"
-          placeholder="Study JavaScript basics"
-          required
-        ></textarea>
-      </div>
-
-      <div>
-        <input type="checkbox" name="isComplete" id="input-is-complete" />
-        <label for="input-is-complete" class="select-none">Is complete?</label>
-      </div>
-      <button type="submit" class="border border-white">Create</button>
-    </form> -->
-    <div id="app">
     </div>
+
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

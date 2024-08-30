@@ -2,7 +2,7 @@ import { deleteTask, updateTask } from "./services";
 
 export const renderTask = (task) => {
     const $taskContanier = document.createElement('div');
-    $taskContanier.classList.add('task-item');
+    $taskContanier.classList.add('task-item', 'border', 'rounded', 'min-w-60', 'm-3');
 
     const $taskTitle = document.createElement('h2');
 
@@ -12,9 +12,9 @@ export const renderTask = (task) => {
 
     const $taskPut = document.createElement('button')
 
-    $taskTitle.classList.add('task-title', 'text-white')
+    $taskTitle.classList.add('task-title', 'flex', 'justify-center')
     $taskTitle.textContent = task.title
-    $taskDelete.classList.add('button-delete')
+    $taskDelete.classList.add('button-delete', 'border', 'rounded', 'bg-red-700')
     $taskPut.classList.add('button-update')
 
     if (task.isCompleted) {
