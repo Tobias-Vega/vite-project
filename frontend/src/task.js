@@ -14,7 +14,7 @@ export const renderTask = (task) => {
 
     $taskTitle.classList.add('task-title', 'flex', 'justify-center')
     $taskTitle.textContent = task.title
-    $taskDelete.classList.add('button-delete', 'border', 'rounded', 'bg-red-700')
+    $taskDelete.classList.add('button-delete', 'border', 'rounded', 'bg-red-700', 'items-center', 'flex', 'relative', 'left-10')
     $taskPut.classList.add('button-update')
 
     if (task.isCompleted) {
